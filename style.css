@@ -1,13 +1,30 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.otf') format('opentype');
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --background1: #002339;
+    --background2: #145a85;
+    --color1: #91d6e9;
+    --color2: #67aabc;
+}
 .hero{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #010758, #490d61);
+    background: linear-gradient(45deg, var(--background1), var(--background2));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,14 +38,15 @@
     margin-bottom: 50px;
 }
 .hero h1 span{
-    color: #ff2963;
+    color: var(--color1);
 }
 .hero textarea{
     width: 600px;
     height: 250px;
-    background: #403d84;
+    background-color: rgba(149, 195, 208, 0.25);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     color: #fff;
-    font-size: 15xp;
+    font-size: 15px;
     border: 0;
     outline: 0;
     padding: 20px;
@@ -47,11 +65,11 @@ textarea::placeholder{
     gap: 20px;
 }
 button{
-    background: #ff2963;
+    background: var(--color2);
     color: #fff;
     font-size: 16px;
     padding: 10px 30px;
-    border-radius: 35px;
+    border-radius: 10px;
     border: 0;
     outline: 0;
     cursor: pointer;
@@ -65,7 +83,8 @@ button img{
 .row select{
     flex: 1;
     color: #fff;
-    background-color: #403d84;
+    background-color: rgba(149, 195, 208, 0.25);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     height: 50px;
     padding: 0 20px;
     outline: 0;
@@ -78,3 +97,5 @@ button img{
     background-position-x: calc(100% - 20px);
     background-position-Y: 20px;
 }
+
+
